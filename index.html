@@ -191,12 +191,36 @@
     const datetime = document.getElementById('datetime').value;
     const message = document.getElementById('message').value.trim();
 
-    const text = `Hello La'hevengold Spa 👋%0A%0AI'd like to book an appointment:%0A%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0ADate & Time: ${datetime}%0AMessage: ${message || 'None'}%0A`;
+    // Format datetime nicely
+    let formattedDateTime = datetime;
+    if (datetime) {
+      const dateObj = new Date(datetime);
+      const options = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric', 
+        hour: 'numeric', 
+        minute: '2-digit', 
+        hour12: true 
+      };
+      formattedDateTime = dateObj.toLocaleString('en-US', options);
+    }
+
+    const text = 
+`Hello La'hevengold Spa 👋
+
+I'd like to book an appointment:
+
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Date & Time: ${formattedDateTime}
+Message: ${message || 'None'}`;
 
     const whatsappURL = `https://wa.me/2348105082763?text=${encodeURIComponent(text)}`;
     window.open(whatsappURL, '_blank');
   });
-  </script>
+</script>
 
   <script>
   document.querySelectorAll('.toggle-faq').forEach(button => {
