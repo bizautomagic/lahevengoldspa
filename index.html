@@ -10,167 +10,214 @@
       theme: {
         extend: {
           colors: {
-            spaPurple: "#9C27B0", // purple from logo
-            spaGold: "#D4AF37",   // gold from logo
-          }
-        }
-      }
+            spaPurple: "#9C27B0",
+            spaGold: "#D4AF37",
+            spaDark: "#4B0082",
+          },
+          fontFamily: {
+            playfair: ['"Playfair Display"', 'serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 1s ease-in-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
     }
   </script>
   <script src="https://kit.fontawesome.com/a2e0e6a98e.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-b from-spaPurple/5 to-white text-gray-900 font-sans">
+<body class="bg-gradient-to-b from-spaPurple/5 to-white text-gray-900 font-montserrat">
 
   <!-- Hero Section -->
-<section class="relative bg-white py-10 px-4 text-center shadow-lg rounded-b-3xl">
-  <img src="./images/logo.png" alt="Spa Logo" class="mx-auto mb-4 w-28 md:w-36 animate-fadeIn" />
-  <h1 class="text-2xl md:text-3xl font-extrabold text-spaPurple mb-2">Glow Up or It's Free 💆‍♀️</h1>
-  <p class="text-base md:text-lg mb-6 text-gray-600">Experience Lagos’ most relaxing beauty treatments with results you’ll love</p>
-  <a href="https://wa.me/2348105082763" class="inline-block bg-gradient-to-r from-spaGold to-yellow-500 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:scale-105 transform transition">
-    Book on WhatsApp
-  </a>
-</section>
+  <section class="relative bg-spaPurple text-white py-16 px-6 text-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-spaPurple/80 to-spaDark/80"></div>
+    <div class="relative z-10 max-w-4xl mx-auto animate-fade-in">
+      <img src="./images/logo.png" alt="Spa Logo" class="mx-auto mb-4 w-32 md:w-40" />
+      <h1 class="text-3xl md:text-5xl font-playfair font-bold mb-3">Glow Up or It's Free 💆‍♀️</h1>
+      <p class="text-base md:text-lg mb-6">Indulge in luxury pampering with our signature beauty treatments</p>
+      <a href="https://wa.me/2348105082763" class="inline-block bg-spaGold text-white text-sm md:text-base py-3 px-6 rounded-full shadow-lg hover:bg-yellow-600 transition transform hover:scale-105">Book on WhatsApp</a>
+    </div>
+  </section>
 
   <!-- Offer Breakdown -->
-  <section class="py-16 px-6 max-w-3xl mx-auto text-center">
-    <h2 class="text-3xl font-bold text-spaGold mb-8">✨ Signature Offer – ₦20,000 Only</h2>
-    <div class="grid gap-6 text-lg">
-      <p class="flex items-center justify-center gap-2">✅ Facial + Massage Combo</p>
-      <p class="flex items-center justify-center gap-2">✅ Pedicure or Manicure</p>
-      <p class="flex items-center justify-center gap-2">✅ Brow Shaping or Lash Lift</p>
-      <p class="flex items-center justify-center gap-2">✅ FREE Skin Consultation</p>
-    </div>
+  <section class="py-16 px-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-playfair font-semibold text-center text-spaGold mb-8 animate-fade-in">Signature Offer – ₦20,000 Only</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
+      <li class="flex items-center gap-3 bg-spaPurple/10 p-4 rounded-xl shadow-md animate-fade-in">
+        <i class="fas fa-check-circle text-spaGold"></i> Facial + Massage Combo
+      </li>
+      <li class="flex items-center gap-3 bg-spaPurple/10 p-4 rounded-xl shadow-md animate-fade-in">
+        <i class="fas fa-check-circle text-spaGold"></i> Pedicure or Manicure
+      </li>
+      <li class="flex items-center gap-3 bg-spaPurple/10 p-4 rounded-xl shadow-md animate-fade-in">
+        <i class="fas fa-check-circle text-spaGold"></i> Brow Shaping or Lash Lift
+      </li>
+      <li class="flex items-center gap-3 bg-spaPurple/10 p-4 rounded-xl shadow-md animate-fade-in">
+        <i class="fas fa-check-circle text-spaGold"></i> FREE Skin Consultation
+      </li>
+    </ul>
     <p class="mt-8 text-center text-sm italic text-gray-500">Limited slots available. Walk-ins welcome too!</p>
   </section>
 
-  <!-- Instagram Gallery -->
-<section class="px-6 py-12 bg-spaPurple/5">
-  <h3 class="text-2xl font-semibold text-center text-spaPurple mb-8">🎥 Watch Our Work</h3>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DM7m32rt-F6/" data-instgrm-version="14"></blockquote>
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DICZaP0tCIu/" data-instgrm-version="14"></blockquote>
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DCl05SsIg73/" data-instgrm-version="14"></blockquote>
-  </div>
-</section>
-<script async src="//www.instagram.com/embed.js"></script>
+  <!-- Instagram Embedded Video Gallery -->
+  <section class="px-6 py-16 bg-spaPurple/5">
+    <h3 class="text-2xl md:text-3xl font-playfair font-semibold text-center text-spaPurple mb-8 animate-fade-in">Watch Our Work</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <blockquote class="instagram-media rounded-lg shadow-lg" data-instgrm-permalink="https://www.instagram.com/reel/DM7m32rt-F6/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:540px; width:100%;"></blockquote>
+      <blockquote class="instagram-media rounded-lg shadow-lg" data-instgrm-permalink="https://www.instagram.com/reel/DICZaP0tCIu/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:540px; width:100%;"></blockquote>
+      <blockquote class="instagram-media rounded-lg shadow-lg" data-instgrm-permalink="https://www.instagram.com/reel/DCl05SsIg73/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:540px; width:100%;"></blockquote>
+    </div>
+  </section>
+  <script async src="//www.instagram.com/embed.js"></script>
 
-<!-- Tour Section -->
-<section class="py-16 px-6">
-  <h3 class="text-3xl font-semibold text-center text-spaGold mb-10">Tour Our Spa</h3>
-  <div class="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
-    <video controls autoplay muted loop playsinline preload="none" class="w-full h-auto">
-      <source src="./images/videotour.mp4" type="video/mp4">
-    </video>
-  </div>
-  <p class="text-center text-sm text-gray-600 mt-6 italic">Take a quick tour of our serene and relaxing space 🌿✨</p>
-</section>
-
-<!-- Testimonials -->
-<section class="bg-gradient-to-r from-spaPurple/10 to-spaGold/10 py-16 px-6">
-  <h3 class="text-3xl font-semibold text-center mb-10 text-spaGold">💬 What Our Clients Say</h3>
-  <div class="grid gap-8 max-w-3xl mx-auto">
-    <div class="bg-white/70 backdrop-blur-md p-6 rounded-2xl shadow">
-      <p class="italic">“I booked a full package for my wedding and it was flawless! I felt like royalty.”</p>
-      <p class="mt-3 font-semibold">– Amaka O.</p>
+  <!-- Tour Our Spa Section -->
+  <section class="py-16 px-6 bg-white">
+    <h3 class="text-2xl md:text-3xl font-playfair font-semibold text-center text-spaGold mb-8 animate-fade-in">Tour Our Spa</h3>
+    <div class="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-xl">
+      <video 
+        controls 
+        muted 
+        loop 
+        playsinline 
+        preload="none" 
+        loading="lazy" 
+        class="w-full h-auto rounded-2xl">
+        <source src="./images/videotour.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <div class="bg-white/70 backdrop-blur-md p-6 rounded-2xl shadow">
-      <p class="italic">“The massage alone is worth it. I came out glowing and relaxed. Definitely coming back.”</p>
-      <p class="mt-3 font-semibold">– Cynthia A.</p>
-    </div>
-    <div class="bg-white/70 backdrop-blur-md p-6 rounded-2xl shadow">
-      <p class="italic">“Clean place, professional service, and very affordable. 10/10 experience.”</p>
-      <p class="mt-3 font-semibold">– Ifeoma M.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="py-16 px-6 max-w-3xl mx-auto">
-  <h3 class="text-3xl font-semibold text-center mb-8 text-spaPurple">❓ Frequently Asked Questions</h3>
-  <div class="space-y-4" id="faq-section">
-    <div class="border border-gray-300 rounded-xl overflow-hidden">
-      <button class="w-full text-left p-5 flex justify-between items-center font-semibold toggle-faq">
-        Do you offer services for sensitive skin?
-        <i class="fas fa-chevron-down text-sm text-spaGold"></i>
-      </button>
-      <div class="faq-answer hidden px-5 pb-5 text-gray-700 text-sm">Absolutely! We offer treatments specifically for sensitive skin.</div>
-    </div>
-    <div class="border border-gray-300 rounded-xl overflow-hidden">
-      <button class="w-full text-left p-5 flex justify-between items-center font-semibold toggle-faq">
-        Can I walk in without booking?
-        <i class="fas fa-chevron-down text-sm text-spaGold"></i>
-      </button>
-      <div class="faq-answer hidden px-5 pb-5 text-gray-700 text-sm">Yes! We welcome walk-ins — but booking ensures you don’t wait.</div>
-    </div>
-    <div class="border border-gray-300 rounded-xl overflow-hidden">
-      <button class="w-full text-left p-5 flex justify-between items-center font-semibold toggle-faq">
-        Can I book a group appointment for a special occasion?
-        <i class="fas fa-chevron-down text-sm text-spaGold"></i>
-      </button>
-      <div class="faq-answer hidden px-5 pb-5 text-gray-700 text-sm">Yes, contact us to arrange details for group bookings.</div>
-    </div>
-  </div>
-</section>
-
-<!-- Booking -->
-<section class="py-16 px-6 max-w-3xl mx-auto">
-  <h3 class="text-3xl font-semibold text-center mb-8 text-spaGold">📅 Book an Appointment</h3>
-  <form id="bookingForm" class="space-y-5 bg-white p-8 rounded-2xl shadow-xl">
-    <input type="text" id="name" placeholder="Your Name" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-spaPurple" />
-    <input type="tel" id="phone" placeholder="Phone Number" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-spaPurple" />
-    <select id="service" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-spaPurple">
-      <option value="">Select Service</option>
-      <option>Facial + Massage Combo</option>
-      <option>Pedicure</option>
-      <option>Manicure</option>
-      <option>Brow Shaping</option>
-      <option>Lash Lift</option>
-      <option>Makeup</option>
-      <option>Bridal Glam</option>
-      <option>Home Service</option>
-    </select>
-    <input type="datetime-local" id="datetime" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-spaPurple" />
-    <textarea id="message" rows="3" placeholder="Anything else?" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-spaPurple"></textarea>
-    <button type="submit" class="w-full bg-gradient-to-r from-spaGold to-yellow-500 text-white font-bold py-3 rounded-full shadow-lg hover:scale-105 transition">Submit & Book</button>
-  </form>
-</section>
-
-<!-- Location -->
-<section class="bg-white py-12 px-6 text-center border-t">
-  <h4 class="text-xl font-semibold mb-3">📍 Visit Us</h4>
-  <p class="text-gray-700">56 Ogudu Rd, beside Stanbic IBTC, Kosofe, Lagos</p>
-  <div class="mt-6">
-    <p class="text-lg font-bold text-spaPurple">📞 08105082763</p>
-    <p class="text-sm text-gray-500 flex items-center justify-center gap-2 mt-2">
-      <i class="fab fa-instagram text-spaPurple"></i>
-      <a href="https://instagram.com/LahevengoldSpa" target="_blank" class="hover:underline">@LahevengoldSpa</a>
+    <p class="text-center text-sm text-gray-600 mt-4 italic animate-fade-in">
+      Step into serenity at our luxurious spa 🌿✨
     </p>
-  </div>
-  <a href="https://wa.me/2348105082763" class="mt-6 inline-block bg-gradient-to-r from-spaGold to-yellow-500 text-white font-semibold py-3 px-8 rounded-full shadow hover:scale-105 transition">Message Us Now</a>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="text-center text-xs py-6 text-gray-500 bg-spaPurple/5">
-  &copy; 2025 La'hevengold Unisex Spa. Designed by <span class="font-semibold">Business Automagic</span>.
-</footer>
+  <!-- Testimonials -->
+  <section class="py-16 px-6 bg-spaPurple/5">
+    <h3 class="text-2xl md:text-3xl font-playfair font-semibold text-center mb-10 text-spaGold animate-fade-in">What Our Clients Say</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition animate-fade-in">
+        <p class="italic text-gray-700">“I booked a full package for my wedding and it was flawless! I felt like royalty.”</p>
+        <p class="mt-4 font-semibold text-spaPurple">– Amaka O.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition animate-fade-in">
+        <p class="italic text-gray-700">“The massage alone is worth it. I came out glowing and relaxed. Definitely coming back.”</p>
+        <p class="mt-4 font-semibold text-spaPurple">– Cynthia A.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition animate-fade-in">
+        <p class="italic text-gray-700">“Clean place, professional service, and very affordable. 10/10 experience.”</p>
+        <p class="mt-4 font-semibold text-spaPurple">– Ifeoma M.</p>
+      </div>
+    </div>
+  </section>
 
-<script>
-  document.getElementById('bookingForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const service = document.getElementById('service').value;
-    const datetime = document.getElementById('datetime').value;
-    const message = document.getElementById('message').value.trim();
+  <!-- FAQ Section -->
+  <section class="py-16 px-6 max-w-4xl mx-auto">
+    <h3 class="text-2xl md:text-3xl font-playfair font-semibold text-center mb-10 text-spaPurple animate-fade-in">Frequently Asked Questions</h3>
+    <div class="space-y-4" id="faq-section">
+      <div class="border border-spaPurple/20 rounded-lg shadow-md">
+        <button class="w-full text-left p-5 flex justify-between items-center font-semibold text-spaPurple toggle-faq">
+          Do you offer services for sensitive skin?
+          <i class="fas fa-chevron-down text-sm text-spaGold"></i>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-sm text-gray-700">
+          Absolutely! We offer treatments specifically tailored for sensitive skin.
+        </div>
+      </div>
+      <div class="border border-spaPurple/20 rounded-lg shadow-md">
+        <button class="w-full text-left p-5 flex justify-between items-center font-semibold text-spaPurple toggle-faq">
+          Can I walk in without booking?
+          <i class="fas fa-chevron-down text-sm text-spaGold"></i>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-sm text-gray-700">
+          Yes! We welcome walk-ins — but booking ensures you don’t wait.
+        </div>
+      </div>
+      <div class="border border-spaPurple/20 rounded-lg shadow-md">
+        <button class="w-full text-left p-5 flex justify-between items-center font-semibold text-spaPurple toggle-faq">
+          Can I book a group appointment for a special occasion?
+          <i class="fas fa-chevron-down text-sm text-spaGold"></i>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-sm text-gray-700">
+          Yes, contact us to arrange details for group bookings.
+        </div>
+      </div>
+    </div>
+  </section>
 
-    let formattedDateTime = datetime;
-    if (datetime) {
-      const dateObj = new Date(datetime);
-      const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true };
-      formattedDateTime = dateObj.toLocaleString('en-US', options);
-    }
+  <!-- Appointment Booking Form -->
+  <section class="py-16 px-6 max-w-2xl mx-auto bg-spaPurple/5 rounded-2xl">
+    <h3 class="text-2xl md:text-3xl font-playfair font-semibold text-center mb-8 text-spaGold animate-fade-in">Book an Appointment</h3>
+    <form id="bookingForm" class="space-y-5">
+      <input type="text" id="name" placeholder="Your Name" required class="w-full p-4 rounded-lg border border-spaPurple/30 focus:outline-none focus:ring-2 focus:ring-spaGold transition" />
+      <input type="tel" id="phone" placeholder="Phone Number" required class="w-full p-4 rounded-lg border border-spaPurple/30 focus:outline-none focus:ring-2 focus:ring-spaGold transition" />
+      <select id="service" required class="w-full p-4 rounded-lg border border-spaPurple/30 focus:outline-none focus:ring-2 focus:ring-spaGold transition">
+        <option value="">Select Service</option>
+        <option>Facial + Massage Combo</option>
+        <option>Pedicure</option>
+        <option>Manicure</option>
+        <option>Brow Shaping</option>
+        <option>Lash Lift</option>
+        <option>Makeup</option>
+        <option>Bridal Glam</option>
+        <option>Home Service</option>
+      </select>
+      <input type="datetime-local" id="datetime" required class="w-full p-4 rounded-lg border border-spaPurple/30 focus:outline-none focus:ring-2 focus:ring-spaGold transition" />
+      <textarea id="message" rows="4" placeholder="Anything else?" class="w-full p-4 rounded-lg border border-spaPurple/30 focus:outline-none focus:ring-2 focus:ring-spaGold transition"></textarea>
+      <button type="submit" class="w-full bg-spaGold text-white py-4 rounded-full shadow-lg hover:bg-yellow-600 transition transform hover:scale-105">Submit & Book</button>
+    </form>
+  </section>
 
-    const text = 
+  <!-- Location & Contact -->
+  <section class="bg-spaDark text-white py-12 px-6 text-center">
+    <h4 class="text-2xl font-playfair font-semibold mb-4 animate-fade-in">📍 Visit Us</h4>
+    <p class="text-lg">56 Ogudu Rd, beside Stanbic IBTC, Kosofe, Lagos</p>
+    <div class="mt-6">
+      <p class="text-lg font-bold">📞 08105082763</p>
+      <p class="text-sm flex items-center justify-center gap-2 mt-2">
+        <i class="fab fa-instagram text-spaGold"></i>
+        <a href="https://instagram.com/LahevengoldSpa" target="_blank" class="hover:underline">@LahevengoldSpa</a>
+      </p>
+    </div>
+    <a href="https://wa.me/2348105082763" class="mt-6 inline-block bg-spaGold text-white py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition transform hover:scale-105">Message Us Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm py-8 text-gray-500 bg-white">
+    &copy; 2025 La'hevengold Unisex Spa. Designed by Business Automagic.
+  </footer>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const datetime = document.getElementById('datetime').value;
+      const message = document.getElementById('message').value.trim();
+
+      let formattedDateTime = datetime;
+      if (datetime) {
+        const dateObj = new Date(datetime);
+        const options = { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric', 
+          hour: 'numeric', 
+          minute: '2-digit', 
+          hour12: true 
+        };
+        formattedDateTime = dateObj.toLocaleString('en-US', options);
+      }
+
+      const text = 
 `Hello La'hevengold Spa 👋
 
 I'd like to book an appointment:
@@ -181,19 +228,20 @@ Service: ${service}
 Date & Time: ${formattedDateTime}
 Message: ${message || 'None'}`;
 
-    const whatsappURL = `https://wa.me/2348105082763?text=${encodeURIComponent(text)}`;
-    window.open(whatsappURL, '_blank');
-  });
-
-  document.querySelectorAll('.toggle-faq').forEach(button => {
-    button.addEventListener('click', () => {
-      const answer = button.nextElementSibling;
-      const icon = button.querySelector('i');
-      answer.classList.toggle('hidden');
-      icon.classList.toggle('fa-chevron-down');
-      icon.classList.toggle('fa-chevron-up');
+      const whatsappURL = `https://wa.me/2348105082763?text=${encodeURIComponent(text)}`;
+      window.open(whatsappURL, '_blank');
     });
-  });
-</script>
+
+    document.querySelectorAll('.toggle-faq').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        answer.classList.toggle('hidden');
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+      });
+    });
+  </script>
+
 </body>
 </html>
