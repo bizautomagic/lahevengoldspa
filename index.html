@@ -10,14 +10,14 @@
       theme: {
         extend: {
           colors: {
-            spaPurple: "#9C27B0", // Base Purple (Muted for backgrounds)
+            spaPurple: "#9C27B0", // Base Purple (Muted for accents)
             spaGold: "#D4AF37",   // Base Gold (Primary Accent)
-            darkBg: "#16161A",    // Near-black for a modern dark theme
-            darkCard: "#232931",  // Slightly lighter card background
+            lightBg: "#F5F5F5",   // Light gray for page background
+            lightCard: "#FFFFFF", // White for card backgrounds
           },
           fontFamily: {
-            sans: ['Inter', 'sans-serif'], // Use a modern sans-serif font
-            heading: ['Clash Display', 'sans-serif'], // Add a strong display font
+            sans: ['Inter', 'sans-serif'], // Modern sans-serif font
+            heading: ['Clash Display', 'sans-serif'], // Strong display font
           },
         }
       }
@@ -28,13 +28,13 @@
   <style>
     /* Custom style for the glow effect on text and borders */
     .text-glow-gold {
-      text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+      text-shadow: 0 0 6px rgba(212, 175, 55, 0.4);
     }
     .border-glow-purple {
-      box-shadow: 0 0 15px rgba(156, 39, 176, 0.4);
+      box-shadow: 0 0 10px rgba(156, 39, 176, 0.3);
     }
-    .text-outline-light {
-      -webkit-text-stroke: 1px #a1a1aa; /* slate-400 */
+    .text-outline-dark {
+      -webkit-text-stroke: 1px #374151; /* gray-700 */
       color: transparent;
     }
     .video-container {
@@ -52,76 +52,76 @@
     }
   </style>
 </head>
-<body class="bg-darkBg text-gray-200 font-sans antialiased">
+<body class="bg-lightBg text-gray-800 font-sans antialiased">
 
-  <header class="py-4 px-6 md:px-12 fixed top-0 left-0 right-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-gray-700/50">
+  <header class="py-4 px-6 md:px-12 fixed top-0 left-0 right-0 z-50 bg-lightBg/90 backdrop-blur-md border-b border-gray-200/50">
     <nav class="max-w-7xl mx-auto flex justify-between items-center">
       <div class="flex items-center gap-3">
         <img src="./images/logo.png" alt="Spa Logo" class="w-16 h-16 rounded-full border border-spaGold/50" />
         <div class="text-xl md:text-2xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-spaGold to-spaPurple">La'hevengold</div>
       </div>
-      <a href="#booking" class="inline-block bg-spaGold text-darkBg font-medium px-4 py-1.5 rounded-full shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105">Book Now</a>
+      <a href="#booking" class="inline-block bg-spaGold text-gray-900 font-medium px-4 py-1.5 rounded-full shadow-md hover:bg-yellow-400 transition duration-300 transform hover:scale-105">Book Now</a>
     </nav>
   </header>
 
-  <section class="pt-24 pb-16 px-6 text-center max-w-4xl mx-auto min-h-[50vh] flex flex-col justify-center items-center relative overflow-hidden">
+  <section class="pt-24 pb-0 px-6 text-center max-w-4xl mx-auto min-h-[50vh] flex flex-col justify-center items-center relative overflow-hidden">
     <h1 class="text-5xl md:text-7xl font-heading font-bold mb-3 leading-tight tracking-tighter">
-      <span class="text-outline-light">Glow Up</span> or It's Free 💆‍♀️
+      <span class="text-outline-dark">Glow Up</span> or It's Free 💆‍♀️
     </h1>
-    <p class="text-lg md:text-xl mb-8 max-w-2xl text-gray-400">Get pampered with our signature beauty combo and leave glowing</p>
-    
-    <a href="https://wa.me/2348105082763" id="booking" class="inline-block bg-spaGold text-darkBg font-bold text-lg py-3 px-8 rounded-full shadow-2xl hover:shadow-spaGold/50 hover:bg-yellow-500 transition duration-300 transform hover:scale-105 border-glow-purple">
-      Book on WhatsApp
-    </a>
+    <p class="text-lg md:text-xl max-w-2xl text-gray-600">Get pampered with our signature beauty combo and leave glowing</p>
   </section>
 
-  <section class="py-16 px-6 max-w-4xl mx-auto">
+  <section class="pt-0 pb-16 px-6 max-w-4xl mx-auto">
     <h2 class="text-3xl md:text-4xl font-heading font-bold text-center text-spaGold mb-12">Signature Offer – ₦20,000 Only</h2>
-    <div class="bg-darkCard p-8 md:p-12 rounded-3xl shadow-xl border border-spaPurple/30 transition duration-500 hover:border-spaGold/50">
-      <ul class="space-y-6 text-xl text-gray-300">
+    <div class="bg-lightCard p-8 md:p-12 rounded-3xl shadow-lg border border-spaPurple/20 transition duration-500 hover:border-spaGold/40">
+      <ul class="space-y-6 text-xl text-gray-700">
         <li class="flex items-center">
-          <span class="mr-4 text-2xl text-spaGold drop-shadow-lg">✦</span>
+          <span class="mr-4 text-2xl text-spaGold drop-shadow-md">✦</span>
           <span>Facial + Massage Combo</span>
         </li>
         <li class="flex items-center">
-          <span class="mr-4 text-2xl text-spaGold drop-shadow-lg">✦</span>
+          <span class="mr-4 text-2xl text-spaGold drop-shadow-md">✦</span>
           <span>Pedicure or Manicure</span>
         </li>
         <li class="flex items-center">
-          <span class="mr-4 text-2xl text-spaGold drop-shadow-lg">✦</span>
+          <span class="mr-4 text-2xl text-spaGold drop-shadow-md">✦</span>
           <span>Brow Shaping or Lash Lift</span>
         </li>
-        <li class="flex items-center border-t border-gray-700 pt-4 mt-4">
-          <span class="mr-4 text-2xl text-spaPurple drop-shadow-lg">✨</span>
-          <span class="font-bold text-white">FREE Skin Consultation</span>
+        <li class="flex items-center border-t border-gray-200 pt-4 mt-4">
+          <span class="mr-4 text-2xl text-spaPurple drop-shadow-md">✨</span>
+          <span class="font-bold text-gray-800">FREE Skin Consultation</span>
         </li>
       </ul>
     </div>
-    <p class="mt-8 text-center text-sm italic text-gray-500">Limited slots available. Walk-ins welcome too!</p>
+    <div class="mt-8 flex justify-center">
+      <p class="text-center text-sm italic text-gray-500">Limited slots available. Walk-ins welcome too!</p>
+    </div>
+    <div class="mt-6 flex justify-center">
+      <a href="https://wa.me/2348105082763" id="booking" class="inline-block bg-spaGold text-gray-900 font-bold text-lg py-3 px-8 rounded-full shadow-lg hover:shadow-spaGold/40 hover:bg-yellow-400 transition duration-300 transform hover:scale-105 border-glow-purple">
+        Book on WhatsApp
+      </a>
+    </div>
   </section>
 
   <section class="px-6 pb-16 max-w-6xl mx-auto">
-  <h3 class="text-3xl font-heading font-bold text-center text-spaPurple mb-12">Watch Our Work</h3>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-    <div class="bg-darkCard rounded-2xl p-4 shadow-2xl border border-gray-700/50 hover:border-spaGold/50 transition duration-300 transform hover:-translate-y-1">
-      <blockquote class="instagram-media w-full h-full" data-instgrm-permalink="https://www.instagram.com/reel/DM7m32rt-F6/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; width:100%;"></blockquote>
+    <h3 class="text-3xl font-heading font-bold text-center text-spaPurple mb-12">Watch Our Work</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-lightCard rounded-2xl p-4 shadow-lg border border-gray-200/50 hover:border-spaGold/40 transition duration-300 transform hover:-translate-y-1">
+        <blockquote class="instagram-media w-full h-full" data-instgrm-permalink="https://www.instagram.com/reel/DM7m32rt-F6/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; width:100%;"></blockquote>
+      </div>
+      <div class="bg-lightCard rounded-2xl p-4 shadow-lg border border-gray-200/50 hover:border-spaGold/40 transition duration-300 transform hover:-translate-y-1">
+        <blockquote class="instagram-media w-full h-full" data-instgrm-permalink="https://www.instagram.com/reel/DICZaP0tCIu/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; width:100%;"></blockquote>
+      </div>
+      <div class="bg-lightCard rounded-2xl p-4 shadow-lg border border-gray-200/50 hover:border-spaGold/40 transition duration-300 transform hover:-translate-y-1">
+        <blockquote class="instagram-media w-full h-full" data-instgrm-permalink="https://www.instagram.com/reel/DCl05SsIg73/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; width:100%;"></blockquote>
+      </div>
     </div>
-    
-    <div class="bg-darkCard rounded-2xl p-4 shadow-2xl border border-gray-700/50 hover:border-spaGold/50 transition duration-300 transform hover:-translate-y-1">
-      <blockquote class="instagram-media w-full h-full" data-instgrm-permalink="https://www.instagram.com/reel/DICZaP0tCIu/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; width:100%;"></blockquote>
-    </div>
+  </section>
+  <script async src="//www.instagram.com/embed.js"></script>
 
-    <div class="bg-darkCard rounded-2xl p-4 shadow-2xl border border-gray-700/50 hover:border-spaGold/50 transition duration-300 transform hover:-translate-y-1">
-      <blockquote class="instagram-media w-full h-full" data-instgrm-permalink="https://www.instagram.com/reel/DCl05SsIg73/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; width:100%;"></blockquote>
-    </div>
-  </div>
-</section>
-<script async src="//www.instagram.com/embed.js"></script>
-
-<section class="bg-darkCard py-16 px-6 border-y border-gray-700/50">
+  <section class="bg-lightCard py-16 px-6 border-y border-gray-200/50">
     <h3 class="text-3xl font-heading font-bold text-center text-spaGold mb-12">Tour Our Spa</h3>
-    <div class="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-spaPurple/50 video-container">
+    <div class="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-lg border border-spaPurple/20 video-container">
       <video 
         controls 
         autoplay 
@@ -140,92 +140,92 @@
     </p>
   </section>
 
-  <section class="bg-darkBg py-16 px-6">
+  <section class="bg-lightBg py-16 px-6">
     <h3 class="text-3xl font-heading font-bold text-center mb-12 text-spaGold">What Our Clients Say</h3>
     <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-      <div class="bg-darkCard p-8 rounded-3xl shadow-xl border border-gray-700/50 transition duration-300 hover:border-spaGold/50">
+      <div class="bg-lightCard p-8 rounded-3xl shadow-lg border border-gray-200/50 transition duration-300 hover:border-spaGold/40">
         <i class="fas fa-quote-left text-2xl text-spaPurple mb-4"></i>
-        <p class="italic text-lg text-gray-300">“I booked a full package for my wedding and it was flawless! I felt like royalty.”</p>
+        <p class="italic text-lg text-gray-600">“I booked a full package for my wedding and it was flawless! I felt like royalty.”</p>
         <p class="mt-4 font-semibold text-spaGold">– Amaka O.</p>
       </div>
-      <div class="bg-darkCard p-8 rounded-3xl shadow-xl border border-gray-700/50 transition duration-300 hover:border-spaGold/50">
+      <div class="bg-lightCard p-8 rounded-3xl shadow-lg border border-gray-200/50 transition duration-300 hover:border-spaGold/40">
         <i class="fas fa-quote-left text-2xl text-spaPurple mb-4"></i>
-        <p class="italic text-lg text-gray-300">“The massage alone is worth it. I came out glowing and relaxed. Definitely coming back.”</p>
+        <p class="italic text-lg text-gray-600">“The massage alone is worth it. I came out glowing and relaxed. Definitely coming back.”</p>
         <p class="mt-4 font-semibold text-spaGold">– Cynthia A.</p>
       </div>
-      <div class="bg-darkCard p-8 rounded-3xl shadow-xl border border-gray-700/50 transition duration-300 hover:border-spaGold/50">
+      <div class="bg-lightCard p-8 rounded-3xl shadow-lg border border-gray-200/50 transition duration-300 hover:border-spaGold/40">
         <i class="fas fa-quote-left text-2xl text-spaPurple mb-4"></i>
-        <p class="italic text-lg text-gray-300">“Clean place, professional service, and very affordable. 10/10 experience.”</p>
+        <p class="italic text-lg text-gray-600">“Clean place, professional service, and very affordable. 10/10 experience.”</p>
         <p class="mt-4 font-semibold text-spaGold">– Ifeoma M.</p>
       </div>
     </div>
   </section>
 
   <section class="py-16 px-6 max-w-4xl mx-auto">
-  <h3 class="text-3xl font-heading font-bold text-center mb-12 text-spaPurple">Frequently Asked Questions</h3>
-  <div class="space-y-4" id="faq-section">
-    <div class="bg-darkCard border border-gray-700 rounded-xl overflow-hidden transition duration-300 hover:border-spaGold/50">
-      <button class="w-full text-left p-5 flex justify-between items-center font-semibold text-gray-300 toggle-faq">
-        Do you offer services for sensitive skin?
-        <i class="fas fa-chevron-down text-sm text-spaGold transition-transform duration-300"></i>
-      </button>
-      <div class="faq-answer hidden px-5 pb-5 text-gray-400 border-t border-gray-700/50">
-        Absolutely! We offer treatments specifically for sensitive skin.
+    <h3 class="text-3xl font-heading font-bold text-center mb-12 text-spaPurple">Frequently Asked Questions</h3>
+    <div class="space-y-4" id="faq-section">
+      <div class="bg-lightCard border border-gray-200 rounded-xl overflow-hidden transition duration-300 hover:border-spaGold/40">
+        <button class="w-full text-left p-5 flex justify-between items-center font-semibold text-gray-700 toggle-faq">
+          Do you offer services for sensitive skin?
+          <i class="fas fa-chevron-down text-sm text-spaGold transition-transform duration-300"></i>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-gray-600 border-t border-gray-200/50">
+          Absolutely! We offer treatments specifically for sensitive skin.
+        </div>
+      </div>
+      <div class="bg-lightCard border border-gray-200 rounded-xl overflow-hidden transition duration-300 hover:border-spaGold/40">
+        <button class="w-full text-left p-5 flex justify-between items-center font-semibold text-gray-700 toggle-faq">
+          Can I walk in without booking?
+          <i class="fas fa-chevron-down text-sm text-spaGold transition-transform duration-300"></i>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-gray-600 border-t border-gray-200/50">
+          Yes! We welcome walk-ins — but booking ensures you don’t wait.
+        </div>
+      </div>
+      <div class="bg-lightCard border border-gray-200 rounded-xl overflow-hidden transition duration-300 hover:border-spaGold/40">
+        <button class="w-full text-left p-5 flex justify-between items-center font-semibold text-gray-700 toggle-faq">
+          Can I book a group appointment for a special occasion?
+          <i class="fas fa-chevron-down text-sm text-spaGold transition-transform duration-300"></i>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-gray-600 border-t border-gray-200/50">
+          Yes, contact us to arrange details for group bookings.
+        </div>
       </div>
     </div>
-    <div class="bg-darkCard border border-gray-700 rounded-xl overflow-hidden transition duration-300 hover:border-spaGold/50">
-      <button class="w-full text-left p-5 flex justify-between items-center font-semibold text-gray-300 toggle-faq">
-        Can I walk in without booking?
-        <i class="fas fa-chevron-down text-sm text-spaGold transition-transform duration-300"></i>
-      </button>
-      <div class="faq-answer hidden px-5 pb-5 text-gray-400 border-t border-gray-700/50">
-        Yes! We welcome walk-ins — but booking ensures you don’t wait.
-      </div>
-    </div>
-    <div class="bg-darkCard border border-gray-700 rounded-xl overflow-hidden transition duration-300 hover:border-spaGold/50">
-      <button class="w-full text-left p-5 flex justify-between items-center font-semibold text-gray-300 toggle-faq">
-        Can I book a group appointment for a special occasion?
-        <i class="fas fa-chevron-down text-sm text-spaGold transition-transform duration-300"></i>
-      </button>
-      <div class="faq-answer hidden px-5 pb-5 text-gray-400 border-t border-gray-700/50">
-        Yes, contact us to arrange details for group bookings.
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section class="py-16 px-6 max-w-xl mx-auto">
-  <h3 class="text-3xl font-heading font-bold text-center mb-8 text-spaGold text-glow-gold">Book an Appointment</h3>
-  <form id="bookingForm" class="space-y-6 bg-darkCard p-8 rounded-3xl shadow-2xl border border-spaGold/30">
-    <input type="text" id="name" placeholder="Your Name" required class="w-full p-4 rounded-xl border border-gray-600 bg-darkBg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-spaGold/70 transition" />
-    
-    <input type="tel" id="phone" placeholder="Phone Number" required class="w-full p-4 rounded-xl border border-gray-600 bg-darkBg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-spaGold/70 transition" />
-    
-    <select id="service" required class="w-full p-4 rounded-xl border border-gray-600 bg-darkBg text-gray-300 focus:outline-none focus:ring-2 focus:ring-spaGold/70 transition appearance-none">
-      <option value="" disabled selected class="text-gray-500">Select Service</option>
-      <option class="text-gray-300">Facial + Massage Combo</option>
-      <option class="text-gray-300">Pedicure</option>
-      <option class="text-gray-300">Manicure</option>
-      <option class="text-gray-300">Brow Shaping</option>
-      <option class="text-gray-300">Lash Lift</option>
-      <option class="text-gray-300">Makeup</option>
-      <option class="text-gray-300">Bridal Glam</option>
-      <option class="text-gray-300">Home Service</option>
-    </select>
+    <h3 class="text-3xl font-heading font-bold text-center mb-8 text-spaGold text-glow-gold">Book an Appointment</h3>
+    <form id="bookingForm" class="space-y-6 bg-lightCard p-8 rounded-3xl shadow-lg border border-spaGold/20">
+      <input type="text" id="name" placeholder="Your Name" required class="w-full p-4 rounded-xl border border-gray-300 bg-lightBg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-spaGold/60 transition" />
+      
+      <input type="tel" id="phone" placeholder="Phone Number" required class="w-full p-4 rounded-xl border border-gray-300 bg-lightBg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-spaGold/60 transition" />
+      
+      <select id="service" required class="w-full p-4 rounded-xl border border-gray-300 bg-lightBg text-gray-700 focus:outline-none focus:ring-2 focus:ring-spaGold/60 transition appearance-none">
+        <option value="" disabled selected class="text-gray-400">Select Service</option>
+        <option class="text-gray-700">Facial + Massage Combo</option>
+        <option class="text-gray-700">Pedicure</option>
+        <option class="text-gray-700">Manicure</option>
+        <option class="text-gray-700">Brow Shaping</option>
+        <option class="text-gray-700">Lash Lift</option>
+        <option class="text-gray-700">Makeup</option>
+        <option class="text-gray-700">Bridal Glam</option>
+        <option class="text-gray-700">Home Service</option>
+      </select>
 
-    <input type="datetime-local" id="datetime" required class="w-full p-4 rounded-xl border border-gray-600 bg-darkBg text-gray-300 focus:outline-none focus:ring-2 focus:ring-spaGold/70 transition" />
+      <input type="datetime-local" id="datetime" required class="w-full p-4 rounded-xl border border-gray-300 bg-lightBg text-gray-700 focus:outline-none focus:ring-2 focus:ring-spaGold/60 transition" />
 
-    <textarea id="message" rows="3" placeholder="Anything else?" class="w-full p-4 rounded-xl border border-gray-600 bg-darkBg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-spaGold/70 transition"></textarea>
+      <textarea id="message" rows="3" placeholder="Any additional comments?" class="w-full p-4 rounded-xl border border-gray-300 bg-lightBg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-spaGold/60 transition"></textarea>
 
-    <button type="submit" class="w-full bg-spaGold text-darkBg font-bold text-lg py-4 rounded-full hover:bg-yellow-500 transition duration-300 transform hover:scale-[1.01]">
-      Submit & Book
-    </button>
-  </form>
-</section>
+      <button type="submit" class="w-full bg-spaGold text-gray-900 font-bold text-lg py-4 rounded-full hover:bg-yellow-400 transition duration-300 transform hover:scale-[1.01]">
+        Submit & Book
+      </button>
+    </form>
+  </section>
 
-  <section class="bg-darkBg/50 py-12 px-6 text-center border-t border-gray-800">
-    <h4 class="text-2xl font-semibold mb-6 text-gray-300">📍 Visit Us</h4>
-    <p class="text-lg mb-6 max-w-md mx-auto text-gray-400">56 Ogudu Rd, beside Stanbic IBTC, Kosofe, Lagos</p>
+  <section class="bg-lightBg/50 py-12 px-6 text-center border-t border-gray-200">
+    <h4 class="text-2xl font-semibold mb-6 text-gray-700">📍 Visit Us</h4>
+    <p class="text-lg mb-6 max-w-md mx-auto text-gray-600">56 Ogudu Rd, beside Stanbic IBTC, Kosofe, Lagos</p>
 
     <div class="mt-8 flex flex-col items-center">
       <p class="text-2xl font-bold text-spaGold mb-2">📞 08105082763</p>
@@ -235,13 +235,13 @@
       </p>
     </div>
 
-    <a href="https://wa.me/2348105082763" class="mt-8 inline-flex items-center gap-2 bg-gradient-to-r from-spaPurple to-indigo-500 text-white font-bold py-3 px-8 rounded-full shadow-xl hover:shadow-spaPurple/50 transition duration-300 transform hover:scale-105">
+    <a href="https://wa.me/2348105082763" class="mt-8 inline-flex items-center gap-2 bg-gradient-to-r from-spaPurple to-indigo-500 text-white font-bold py-3 px-8 rounded-full shadow-md hover:shadow-spaPurple/40 transition duration-300 transform hover:scale-105">
       <i class="fab fa-whatsapp text-lg"></i>
       Message Us Now
     </a>
   </section>
 
-  <footer class="text-center text-xs py-6 text-gray-600 bg-darkBg border-t border-gray-800">
+  <footer class="text-center text-xs py-6 text-gray-500 bg-lightBg border-t border-gray-200">
     &copy; 2025 La'hevengold Unisex Spa. Designed by Business Automagic.
   </footer>
 
@@ -293,7 +293,7 @@ Message: ${message || 'None'}`;
       answer.classList.toggle('hidden');
       icon.classList.toggle('fa-chevron-down');
       icon.classList.toggle('fa-chevron-up');
-      icon.classList.toggle('rotate-180'); // Added for smoother rotation
+      icon.classList.toggle('rotate-180'); // Smooth rotation
     });
   });
   </script>
